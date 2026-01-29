@@ -14,7 +14,10 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "config": {
+        "googleMapsApiKey": "AIzaSyDvB3kEAnN2h3sBjfB_wwVSRDsu7iaXs6Q"
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -24,11 +27,16 @@
     },
     "web": {
       "bundler": "metro",
-      "output": "static",
+      "output": "server",
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router",
+      [
+        "expo-router",
+        {
+          "origin": "https://uber.com/"
+        }
+      ],
       [
         "expo-splash-screen",
         {
